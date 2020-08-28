@@ -13,9 +13,8 @@
         return service;
 
         function GetStarships(url) {
-            
             if (!url) {
-                url  ='https://swapi.co/api/starships/'
+                url  ='https://swapi.dev/api/starships/'
             }
             return $http.get(url,{
                 headers: {

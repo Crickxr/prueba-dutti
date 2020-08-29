@@ -7,14 +7,20 @@
         templateUrl: './ships/starships-list/starships-list.component.html',
         bindings: {
             starships: '<',
-            onFetchNextPage: '&'
+            onFetchNextPage: '&',
+            onEnterDetail: '&'
         }
     })
-    function StarshipsListController($scope) {
+    function StarshipsListController($location, $window) {
         var ctrl = this;
 
         ctrl.fetchNextPage = function () {
             ctrl.onFetchNextPage();
+        }
+
+        ctrl.enterDetail = function (data) {
+            $window.localStorage.setItem('data', JSON.stringify(data));
+            $location.path('/starship-detail');
         }
     }
 

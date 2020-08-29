@@ -9,6 +9,12 @@
     config.$inject = ['$routeProvider', '$locationProvider'];
     function config($routeProvider, $locationProvider) {
         $routeProvider
+            .when('/starship-detail', {
+                controller: 'StarshipDetailController',
+                templateUrl: 'starship-detail/starship-detail.view.html',
+                controllerAs: '$ctrl'
+                
+            })
             .when('/ships', {
                 controller: 'ShipsController',
                 templateUrl: 'ships/ships.view.html',

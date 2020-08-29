@@ -1,7 +1,18 @@
+<div class="header">
+    <div>
+        <a ng-click="$ctrl.goToShips()">Ships</a>
+        <a ng-click="$ctrl.goToPlanets()">Planets</a>
+        <a ng-click="$ctrl.goToPilots()">Pilots</a>
+    </div>
+    <h2>The Star Wars API</h2>
+    <div>
+        <a>Sign In</a>
+    </div>
+</div>
 <h1>Ships</h1>
 
 
-<starships-list starships="$ctrl.starships" on-fetch-next-page="$ctrl.fetchNext()" on-enter-detail="$ctrl.enterDetail(data)"></starships-list>
+<starships-list starships="$ctrl.starships" on-fetch-next-page="$ctrl.fetchNext()" ></starships-list>
 
 <div class="alert alert-danger" role="alert" ng-if="$ctrl.error">
     Hi ha hagut un error al fer la petició

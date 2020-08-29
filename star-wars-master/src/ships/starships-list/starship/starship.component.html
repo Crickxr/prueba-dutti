@@ -1,8 +1,9 @@
-<div class="panel panel-default ship">
-    <div class="panel-heading">
-        <h3 class="panel-title">{{ $ctrl.starship.name}}</h3>
+<div>
+    <div class="ship-img">
+        <img ng-click="$ctrl.enterDetail($ctrl.starship)" ng-src="https://starwars-visualguide.com/assets/img/starships/{{$ctrl.shipId}}.jpg" onerror="this.src = '../../../imgs/default.png'">
     </div>
-    <div class="panel-body">
-        <img ng-src="https://starwars-visualguide.com/assets/img/starships/{{$ctrl.shipId}}.jpg">
+    <div class="ship-data">
+        <h3 ng-click="$ctrl.enterDetail($ctrl.starship)">{{ $ctrl.starship.name}}</h3>
+        <h3 ng-click="$ctrl.enterDetail($ctrl.starship)">{{ $ctrl.starship.model}}</h3>
     </div>
 </div>

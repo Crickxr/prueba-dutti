@@ -15,6 +15,18 @@
                 controllerAs: '$ctrl'
                 
             })
+            .when('/planets', {
+                controller: 'PlanetsController',
+                templateUrl: 'planets/planets.view.html',
+                controllerAs: '$ctrl'
+                
+            })
+            .when('/pilots', {
+                controller: 'PilotsController',
+                templateUrl: 'pilots/pilots.view.html',
+                controllerAs: '$ctrl'
+                
+            })
             .when('/ships', {
                 controller: 'ShipsController',
                 templateUrl: 'ships/ships.view.html',
